@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DJS logo placeholder">
+  <defs>
+    <linearGradient id="djs" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c026d3"/>
+      <stop offset="0.5" stop-color="#e11d48"/>
+      <stop offset="1" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#141218"/>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="none" stroke="url(#djs)" stroke-width="2.5"/>
+  <text x="32" y="40" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="url(#djs)">DJS</text>
+</svg>
