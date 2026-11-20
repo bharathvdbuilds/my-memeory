@@ -68,7 +68,7 @@ Change both addresses to the real handle, for example `https://instagram.com/you
 
 ## Link preview image
 
-`index.html` line 11, comment about `og:url` and `og:image`. When the site has a public address, set `og:image` and `twitter:image` to the full address of the hero photo (starting with `https://`).
+The public address is already set to https://bharathvdbuilds.github.io/my-memeory/dance-studio/ in the link-preview tags near the top of `index.html`. If the site moves to another address, update `og:url`, `og:image`, `twitter:image`, and the `url` inside the script block at the top.
 
 ## Phone number, if it ever changes
 
