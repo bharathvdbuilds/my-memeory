@@ -1,3 +1,9 @@
+export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+export function asset(path: string) {
+  return `${BASE_PATH}${path}`;
+}
+
 export const WHATSAPP_TEXT =
   "Hi, I saw the Unity Martial Arts Club website. I would like to enquire about the ₹2,000 offer (valid for 24 hours). Please share class details.";
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { NAV, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/site";
+import { asset, NAV, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/lib/site";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -40,7 +40,7 @@ export function Header() {
         <a className="brand" href="#home" onClick={close}>
           <span className="brand-mark">
             <Image
-              src="/logo.png"
+              src={asset("/logo.png")}
               alt="Unity Martial Arts Club"
               fill
               sizes="76px"

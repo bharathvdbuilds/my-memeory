@@ -9,6 +9,7 @@ import {
   PHONE_TEL,
   PROGRAMS,
   WHATSAPP_URL,
+  asset,
 } from "@/lib/site";
 
 export default function HomePage() {
@@ -19,7 +20,7 @@ export default function HomePage() {
         <section className="hero" id="home" aria-label="Home">
           <div className="hero-media">
             <Image
-              src="/images/hero.jpg"
+              src={asset("/images/hero.jpg")}
               alt="A karate student practising a punch toward tall windows"
               fill
               priority
@@ -78,7 +79,7 @@ export default function HomePage() {
             </div>
             <figure className="frame frame-about">
               <Image
-                src="/images/about.jpg"
+                src={asset("/images/about.jpg")}
                 alt="An instructor leading students through karate stances in a bright studio"
                 fill
                 sizes="(max-width: 900px) 100vw, 45vw"
@@ -203,7 +204,7 @@ export default function HomePage() {
               {GALLERY.map((photo) => (
                 <figure className="frame" key={photo.src}>
                   <Image
-                    src={photo.src}
+                    src={asset(photo.src)}
                     alt={photo.alt}
                     fill
                     sizes="(max-width: 720px) 50vw, 33vw"
@@ -257,7 +258,7 @@ export default function HomePage() {
         <div className="wrap">
           <div className="footer-logo">
             <span className="footer-logo-mark">
-              <Image src="/logo.png" alt="" fill sizes="96px" />
+              <Image src={asset("/logo.png")} alt="" fill sizes="96px" />
             </span>
           </div>
           <p className="name">Unity Martial Arts Club</p>

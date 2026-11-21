@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Oswald } from "next/font/google";
+import { asset } from "@/lib/site";
 import "./globals.css";
 
 const body = Manrope({
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "Unity Martial Arts Club",
     images: [
       {
-        url: "/images/hero.jpg",
+        url: asset("/images/hero.jpg"),
         width: 2000,
         height: 1333,
         alt: "A karate student practising a punch toward tall windows",
@@ -43,11 +44,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/images/hero.jpg"],
+    images: [asset("/images/hero.jpg")],
   },
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: asset("/logo.png"),
+    apple: asset("/logo.png"),
   },
 };
 
