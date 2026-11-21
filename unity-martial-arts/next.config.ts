@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
-const basePath = process.env.GITHUB_PAGES === "true" ? "/my-memeory" : "";
+const basePath =
+  process.env.GITHUB_PAGES === "true" ? "/my-memeory/unity" : "";
 
 const nextConfig: NextConfig = {
   output: "export",
