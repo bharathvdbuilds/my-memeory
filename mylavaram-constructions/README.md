@@ -23,7 +23,19 @@ npm run build
 npm run preview
 ```
 
-Static assets are written to `dist/`. Deploy that folder to Netlify, Vercel, Cloudflare Pages, S3, or any static host.
+Static assets are written to `dist/` with `base: "/"`. Deploy that folder to Netlify, Vercel, Cloudflare Pages, S3, or any static host.
+
+### GitHub Pages
+
+This repository already publishes `main` from the repository root. Do not switch Pages to an Actions artifact of this app alone; that would replace the memory PWA.
+
+```bash
+npm run build:pages
+```
+
+That writes a production build to `../mylavaram` with `base` `/my-memeory/mylavaram/`, plus a copy of `index.html` for each client route so a refresh resolves without a server rewrite. Commit that folder. Once it is on `main`, the site is:
+
+https://bharathvdbuilds.github.io/my-memeory/mylavaram/
 
 - Netlify: `public/_redirects` provides SPA fallback.
 - Vercel: `vercel.json` rewrites all routes to `index.html`.
@@ -117,6 +129,7 @@ After the move, point DNS / hosting at the new repo’s `dist/` deploy and updat
 | Script | Purpose |
 | --- | --- |
 | `npm run dev` | Local development |
-| `npm run build` | Typecheck + production bundle |
+| `npm run build` | Typecheck + production bundle (`dist/`, base `/`) |
+| `npm run build:pages` | Same, emitted to `../mylavaram` for GitHub Pages |
 | `npm run preview` | Serve `dist/` locally |
 | `npm run lint` | Oxlint |
