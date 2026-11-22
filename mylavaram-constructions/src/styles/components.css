@@ -5,7 +5,7 @@
   z-index: 100;
   height: var(--header-h);
   background: rgba(23, 28, 34, 0.92);
-  backdrop-filter: blur(12px);
+  /* backdrop-filter would trap the fixed mobile nav inside this header */
   border-bottom: 1px solid rgba(246, 245, 241, 0.08);
 }
 
