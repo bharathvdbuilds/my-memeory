@@ -22,9 +22,26 @@
       rel="stylesheet"
     />
     <title>Mylavaram Constructions | Designed. Engineered. Built.</title>
+    <script>
+      /* GitHub Pages serves this source folder at /mylavaram-constructions/ and the
+         module script below 404s there, so the directory opens blank. Send that
+         visit to the built site. Vite dev uses "/" and the published build uses
+         "/mylavaram/", so neither of those paths is redirected. */
+      (function () {
+        var path = location.pathname;
+        if (/\/mylavaram-constructions\/(?:index\.html)?$/.test(path)) {
+          location.replace(path.replace(/mylavaram-constructions\/(?:index\.html)?$/, "mylavaram/"));
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <p style="font-family:system-ui,sans-serif;padding:24px">
+        The live site is <a href="../mylavaram/">Mylavaram Constructions</a>.
+      </p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

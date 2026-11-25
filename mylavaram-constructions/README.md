@@ -37,6 +37,8 @@ That writes a production build to `../mylavaram` with `base` `/my-memeory/mylava
 
 https://bharathvdbuilds.github.io/my-memeory/mylavaram/
 
+The source folder stays in the repository. Its `index.html` is also what GitHub Pages serves for `/mylavaram-constructions/`, and the Vite entry script cannot load there, so that URL used to open a blank page. A short script in `index.html` redirects that path (and `index.html` itself) to `/mylavaram/`. It matches only a path ending in `mylavaram-constructions`, so `npm run dev` and the built site are unchanged. No source files are removed.
+
 - Netlify: `public/_redirects` provides SPA fallback.
 - Vercel: `vercel.json` rewrites all routes to `index.html`.
 - Other hosts: configure equivalent SPA fallback to `index.html`.
