@@ -1,0 +1,5 @@
+# Demo page. The host robots.txt is at the GitHub Pages origin;
+# this file documents that the demo is not meant to be indexed.
+# The page also sends <meta name="robots" content="noindex">.
+User-agent: *
+Disallow: /
