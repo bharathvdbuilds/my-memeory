@@ -14,10 +14,10 @@
     return;
   }
 
-  var message = "Hello, I saw the sample websites and I would like a site like this for my business.";
+  var message = "Hi, I saw your demo sites and want a website for my business";
   var href = "https://wa.me/" + raw + "?text=" + encodeURIComponent(message);
-  cta.setAttribute("aria-disabled", "false");
-  cta.addEventListener("click", function () {
-    window.open(href, "_blank", "noopener,noreferrer");
-  });
+  cta.setAttribute("href", href);
+  cta.setAttribute("target", "_blank");
+  cta.setAttribute("rel", "noopener noreferrer");
+  cta.removeAttribute("aria-disabled");
 })();
